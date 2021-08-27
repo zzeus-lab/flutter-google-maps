@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CategoryButton extends StatelessWidget {
-  const CategoryButton({Key key}) : super(key: key);
+  final String label;
+  const CategoryButton({this.label});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +16,7 @@ class CategoryButton extends StatelessWidget {
           child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.0),
               child: Row(
-                children: [Icon(Icons.ac_unit), Text("skateparks")],
+                children: [Icon(Icons.ac_unit), Text(this.label)],
               )),
         ));
   }
