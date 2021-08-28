@@ -26,7 +26,11 @@ class _MainLayoutState extends State<MainLayout> {
         leadingWidth: 80,
         actions: widget.actions,
       ),
-      body: widget.child,
+      body: Column(children: [
+        Expanded(
+          child: widget.child,
+        )
+      ]),
     );
   }
 }
